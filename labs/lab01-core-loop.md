@@ -136,3 +136,4 @@ En el siguiente laboratorio se abordará:
 
 ---
 ⬅️ [Volver al README](../../README.md)
+🏠 [Repositorio principal](https://github.com/aralvega/retro_01_pong_arcade)

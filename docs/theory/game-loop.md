@@ -144,3 +144,4 @@ Una implementación correcta desde el inicio evita problemas complejos en etapas
 
 ---
 ⬅️ [Volver al README](../../README.md)
+🏠 [Repositorio principal](https://github.com/aralvega/retro_01_pong_arcade)
