@@ -25,7 +25,7 @@ class InicioState implements GameState{
   
   public void keyPressed(char keyValue, int keyCodeValue){
     if(keyValue== ' '){
-      println("Start game requested");
+      this.game.setState(new JugandoState(this.game));
     }
   }
   
