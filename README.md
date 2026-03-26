@@ -209,6 +209,7 @@ Este proyecto está diseñado como recurso para:
 Universidad Nacional de Jujuy – Facultad de Ingeniería  
 
 🔗 [LinkedIn](https://www.linkedin.com/in/ariel-alejandro-vega/)
+📧 avega@fi.unju.edu.ar
 
 ---
 
