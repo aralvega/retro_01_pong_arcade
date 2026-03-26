@@ -18,6 +18,15 @@ No se trata solo de un clon, sino de una implementación que busca:
 
 ---
 
+## 🔗 Navegación rápida
+
+- 📚 [Lab 01 — Core Loop](labs/lab01-core-loop.md)  
+- 🧠 [Teoría — Game Loop](docs/theory/game-loop.md)  
+- 🎯 [Visión del proyecto](docs/design/vision.md)  
+- 🗺️ [Roadmap](docs/design/roadmap.md)
+
+---
+
 ## 🎯 Objetivos
 
 * Implementar el **Game Loop (input → update → render)**
@@ -100,7 +109,7 @@ retro-01-pong-arcade/
 
 El proyecto incluye una serie de laboratorios progresivos:
 
-* Lab 01 — Game Loop
+- [Lab 01 — Core Loop y estructura base](labs/lab01-core-loop.md)
 * Lab 02 — Entidades
 * Lab 03 — Colisiones
 * Lab 04 — Máquina de estados
@@ -112,7 +121,10 @@ El proyecto incluye una serie de laboratorios progresivos:
 ## 📖 Documentación
 
 * Teoría → `docs/theory/`
+    - [Game Loop](docs/theory/game-loop.md)
 * Diseño → `docs/design/`
+    - [Visión del proyecto](docs/design/vision.md)  
+    - [Roadmap de desarrollo](docs/design/roadmap.md)
 * Diagramas → `docs/diagrams/`
 * Bitácora → `docs/devlog/`
 
@@ -120,7 +132,7 @@ El proyecto incluye una serie de laboratorios progresivos:
 
 ## 🚀 Roadmap
 
-Ver archivo: `docs/design/roadmap.md`
+Consultar: [Roadmap de desarrollo](docs/design/roadmap.md)
 
 ---
 
