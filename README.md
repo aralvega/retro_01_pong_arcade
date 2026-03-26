@@ -20,7 +20,8 @@ No se trata solo de un clon, sino de una implementación que busca:
 
 ## 🔗 Navegación rápida
 
-- 📚 [Lab 01 — Core Loop](labs/lab01-core-loop.md)  
+- 📚 [Lab 01 — Core Loop](labs/lab01-core-loop.md)
+- 📚 [Lab 02 — Entidades y movimiento](labs/lab02-entities-and-movement.md)  
 - 🧠 [Teoría — Game Loop](docs/theory/game-loop.md)  
 - 🎯 [Visión del proyecto](docs/design/vision.md)  
 - 🗺️ [Roadmap](docs/design/roadmap.md)
@@ -110,7 +111,7 @@ retro-01-pong-arcade/
 El proyecto incluye una serie de laboratorios progresivos:
 
 - [Lab 01 — Core Loop y estructura base](labs/lab01-core-loop.md)
-* Lab 02 — Entidades
+- [Lab 02 — Entidades y movimiento](labs/lab02-entities-and-movement.md)
 * Lab 03 — Colisiones
 * Lab 04 — Máquina de estados
 * Lab 05 — IA del oponente
