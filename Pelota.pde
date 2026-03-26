@@ -83,4 +83,8 @@ class Pelota{
     this.velocity.set(this.baseSpeed * directionX, random(-180, 180));
   }
   
+  public PVector getPosition(){
+    return this.position;
+  }
+  
 }

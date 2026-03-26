@@ -43,4 +43,8 @@ class Paleta{
     this.score++;
   }
   
+  public void resetScore(){
+    this.score = 0;
+  }
+  
 }
