@@ -23,7 +23,8 @@ No se trata solo de un clon, sino de una implementación que busca:
 - 📚 [Lab 01 — Core Loop](labs/lab01-core-loop.md)
 - 📚 [Lab 02 — Entidades y movimiento](labs/lab02-entities-and-movement.md)
 - 📚 [Lab 03 — Colisiones](labs/lab03-collisions.md)  
-- 🧠 [Teoría — Game Loop](docs/theory/game-loop.md)  
+- 🧠 [Teoría — Game Loop](docs/theory/game-loop.md)
+- 🧠 [Teoría — Sistema de colisiones](docs/theory/collision-system.md)  
 - 🎯 [Visión del proyecto](docs/design/vision.md)  
 - 🗺️ [Roadmap](docs/design/roadmap.md)
 
@@ -124,6 +125,7 @@ El proyecto incluye una serie de laboratorios progresivos:
 
 * Teoría → `docs/theory/`
     - [Game Loop](docs/theory/game-loop.md)
+    - [Sistema de colisiones](docs/theory/collision-system.md)
 * Diseño → `docs/design/`
     - [Visión del proyecto](docs/design/vision.md)  
     - [Roadmap de desarrollo](docs/design/roadmap.md)
