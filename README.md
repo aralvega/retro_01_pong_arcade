@@ -1,7 +1,7 @@
 # 🎮 Retro Pong Arcade (Processing)
 
 **Reimplementación del clásico Pong con arquitectura modular, documentación progresiva y enfoque pedagógico-profesional.**
-
+> Proyecto desarrollado como base para una serie de ports retro con enfoque arquitectónico y pedagógico.
 ---
 
 ## 🧠 Descripción
@@ -23,10 +23,13 @@ No se trata solo de un clon, sino de una implementación que busca:
 - 📚 [Lab 01 — Core Loop](labs/lab01-core-loop.md)
 - 📚 [Lab 02 — Entidades y movimiento](labs/lab02-entities-and-movement.md)
 - 📚 [Lab 03 — Colisiones](labs/lab03-collisions.md)
-- 📚 [Lab 03 — Reglas de Pong](labs/lab04-core-pong-rules.md)  
+- 📚 [Lab 04 — Reglas de Pong](labs/lab04-core-pong-rules.md)
+- 📚 [Lab 05 — CPU y flujo de juego](labs/lab05-cpu-and-game-flow.md)  
 - 🧠 [Teoría — Game Loop](docs/theory/game-loop.md)
 - 🧠 [Teoría — Sistema de colisiones](docs/theory/collision-system.md)
-- 🧠 [Teoría — Reglas de juego](docs/theory/game-rules.md)  
+- 🧠 [Teoría — Reglas de juego](docs/theory/game-rules.md)
+- 🧠 [Teoría — IA simple](docs/theory/simple-ai.md)
+- 🧠 [Teoría — Estados de juego](docs/theory/game-states.md)  
 - 🎯 [Visión del proyecto](docs/design/vision.md)  
 - 🗺️ [Roadmap](docs/design/roadmap.md)
 
@@ -48,7 +51,7 @@ No se trata solo de un clon, sino de una implementación que busca:
 * Sistema de puntaje
 * Estados de juego (Inicio, Jugando, Fin)
 * Colisiones pelota-paleta y pelota-pared
-* Incremento progresivo de dificultad
+* Incremento progresivo de dificultad (en desarrollo)
 * HUD con visualización de puntaje
 
 ---
@@ -69,7 +72,7 @@ El proyecto se organiza en capas con responsabilidades claramente diferenciadas:
 
 - `InicioState` → pantalla inicial  
 - `JugandoState` → lógica principal del juego  
-- `GanadorState` *(en desarrollo)*  
+- `GanadorState` → Muestra el resultado del juego y permite reiniciar   
 
 ---
 
@@ -78,7 +81,7 @@ El proyecto se organiza en capas con responsabilidades claramente diferenciadas:
 - `Pelota` → objeto dinámico principal  
 - `Paleta` → entidad base  
 - `PaletaJugador` → controlada por el jugador  
-- `PaletaCPU` *(en desarrollo)*  
+- `PaletaCPU` → controlada por una IA básica reactiva 
 
 ---
 
@@ -100,12 +103,12 @@ El proyecto se organiza en capas con responsabilidades claramente diferenciadas:
 El sistema sigue una arquitectura basada en estados:
 
 ```text
-Game → GameState → Entidades → Colisiones → Reglas → Render
+Game → GameState → Entidades → Colisiones → Reglas → Render (UI)
 ```
 ## 🔁 Game Loop
 El juego sigue el siguiente flujo:
 ```text
-input → update → render
+input → update → collision → rules → render
 ```
 
 Este enfoque permite separar claramente:
@@ -125,12 +128,14 @@ retro-01-pong-arcade/
 │   ├── GameState.pde              # Interfaz de estados
 │   ├── InicioState.pde
 │   ├── JugandoState.pde
+│   ├── GanadorState.pde
 │   ├── Paleta.pde
 │   ├── PaletaJugador.pde
+│   ├── PaletaCPU.pde
 │   ├── Pelota.pde
 │   ├── BoxCollider.pde
 │   ├── Collision.pde
-│   ├── HUD.pde
+│   ├── Hud.pde
 │   ├── Time.pde
 │   └── Config.pde
 │
@@ -144,6 +149,7 @@ retro-01-pong-arcade/
 │
 └── README.md
 ```
+> En Processing, todos los archivos `.pde` forman parte de un mismo sketch.
 ---
 ## 📚 Enfoque didáctico
 
@@ -153,8 +159,7 @@ El proyecto incluye una serie de laboratorios progresivos:
 - [Lab 02 — Entidades y movimiento](labs/lab02-entities-and-movement.md)
 - [Lab 03 — Colisiones](labs/lab03-collisions.md)
 - [Lab 04 — Reglas de Pong](labs/lab04-core-pong-rules.md)
-* Lab 04 — Máquina de estados
-* Lab 05 — IA del oponente
+- [Lab 05 — CPU y flujo de juego](labs/lab05-cpu-and-game-flow.md)
 * Lab 06 — Pulido y optimización
 
 ---
@@ -164,7 +169,9 @@ El proyecto incluye una serie de laboratorios progresivos:
 * Teoría → `docs/theory/`
     - [Game Loop](docs/theory/game-loop.md)
     - [Sistema de colisiones](docs/theory/collision-system.md)
+    - [IA simple](docs/theory/simple-ai.md)
     - [Reglas de juego](docs/theory/game-rules.md)
+    - [Estados de juego](docs/theory/game-states.md)
 * Diseño → `docs/design/`
     - [Visión del proyecto](docs/design/vision.md)  
     - [Roadmap de desarrollo](docs/design/roadmap.md)
@@ -189,7 +196,8 @@ Consultar: [Roadmap de desarrollo](docs/design/roadmap.md)
 
 ## 📌 Estado del proyecto
 
-🟡 En desarrollo — reconstrucción desde cero con estándares de portfolio.
+🟢 Funcional — versión jugable completa con oponente CPU y flujo de estados.  
+🟡 En desarrollo — mejoras de balance, optimización y presentación.
 
 ---
 
@@ -197,7 +205,7 @@ Consultar: [Roadmap de desarrollo](docs/design/roadmap.md)
 
 Este proyecto está diseñado como recurso para:
 
-* Fundamentos de Programación
+* Fundamentos de Programación Orientada a Objetos
 * Programación de Videojuegos
 * Modelado de sistemas interactivos
 
@@ -208,7 +216,7 @@ Este proyecto está diseñado como recurso para:
 **Mg. Ing. Ariel Alejandro Vega**  
 Universidad Nacional de Jujuy – Facultad de Ingeniería  
 
-🔗 [LinkedIn](https://www.linkedin.com/in/ariel-alejandro-vega/)
+🔗 [LinkedIn](https://www.linkedin.com/in/ariel-alejandro-vega/)  
 📧 avega@fi.unju.edu.ar
 
 ---
