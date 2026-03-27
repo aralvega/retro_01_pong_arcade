@@ -25,13 +25,15 @@ No se trata solo de un clon, sino de una implementación que busca:
 - 📚 [Lab 03 — Colisiones](labs/lab03-collisions.md)
 - 📚 [Lab 04 — Reglas de Pong](labs/lab04-core-pong-rules.md)
 - 📚 [Lab 05 — CPU y flujo de juego](labs/lab05-cpu-and-game-flow.md)
-- 📚 [Lab 06 Parte01 — Polish y Balance de juego](labs/lab06-polish-and-balance.md)  
+- 📚 [Lab 06 Parte01 — Polish y Balance del juego](labs/lab06-polish-and-balance.md)
+- 📚 [Lab 06 Parte02 — Audio del juego](labs/lab06-audio.md)  
 - 🧠 [Teoría — Game Loop](docs/theory/game-loop.md)
 - 🧠 [Teoría — Sistema de colisiones](docs/theory/collision-system.md)
 - 🧠 [Teoría — Reglas de juego](docs/theory/game-rules.md)
 - 🧠 [Teoría — IA simple](docs/theory/simple-ai.md)
 - 🧠 [Teoría — Estados de juego](docs/theory/game-states.md)
-- 🧠 [Teoría — Balance de juego](docs/theory/game-balance.md)  
+- 🧠 [Teoría — Balance de juego](docs/theory/game-balance.md)
+- 🧠 [Teoría — Audio en videojuegos 2D](docs/theory/game-audio.md)  
 - 🎯 [Visión del proyecto](docs/design/vision.md)  
 - 🗺️ [Roadmap](docs/design/roadmap.md)
 
@@ -39,7 +41,7 @@ No se trata solo de un clon, sino de una implementación que busca:
 
 ## 🎯 Objetivos
 
-* Implementar el **Game Loop (input → update → render)**
+* Implementar el **Game Loop (input → update → collision → rules → render)**
 * Utilizar **delta time** para independencia del frame rate
 * Modelar el flujo del juego mediante **máquina de estados**
 * Diseñar entidades desacopladas (Pelota, Paleta, etc.)
@@ -53,13 +55,16 @@ No se trata solo de un clon, sino de una implementación que busca:
 * Sistema de puntaje
 * Estados de juego (Inicio, Jugando, Fin)
 * Colisiones pelota-paleta y pelota-pared
-* Incremento progresivo de dificultad (en desarrollo)
+* Incremento progresivo de dificultad mediante velocidad de la pelota
 * HUD con visualización de puntaje
+* Feedback visual (flash de colisión)
+* Feedback sonoro (colisiones, rebotes y puntaje)
 
 ---
 
 ## 🧱 Arquitectura
 
+La arquitectura evoluciona progresivamente a lo largo de los laboratorios.
 El proyecto se organiza en capas con responsabilidades claramente diferenciadas:
 
 ### Núcleo
@@ -74,7 +79,7 @@ El proyecto se organiza en capas con responsabilidades claramente diferenciadas:
 
 - `InicioState` → pantalla inicial  
 - `JugandoState` → lógica principal del juego  
-- `GanadorState` → Muestra el resultado del juego y permite reiniciar   
+- `GanadorState` → muestra el resultado del juego y permite reiniciar   
 
 ---
 
@@ -97,6 +102,12 @@ El proyecto se organiza en capas con responsabilidades claramente diferenciadas:
 ### Interfaz de usuario
 
 - `Hud` → visualización del puntaje  
+
+---
+
+### Audio
+
+- `AudioManager` → gestión y reproducción de sonidos del juego
 
 ---
 
@@ -128,6 +139,7 @@ retro-01-pong-arcade/
 │   ├── retro_01_pong_arcade.pde   # Sketch principal
 │   ├── Game.pde                   # Coordinador del juego
 │   ├── GameState.pde              # Interfaz de estados
+│   ├── AudioManager.pde
 │   ├── InicioState.pde
 │   ├── JugandoState.pde
 │   ├── GanadorState.pde
@@ -162,7 +174,8 @@ El proyecto incluye una serie de laboratorios progresivos:
 - [Lab 03 — Colisiones](labs/lab03-collisions.md)
 - [Lab 04 — Reglas de Pong](labs/lab04-core-pong-rules.md)
 - [Lab 05 — CPU y flujo de juego](labs/lab05-cpu-and-game-flow.md)
-- [Lab 06 Parte01 — Polish y Balance de juego](labs/lab06-polish-and-balance.md)
+- [Lab 06 Parte01 — Polish y Balance del juego](labs/lab06-polish-and-balance.md)
+- [Lab 06 Parte02 — Audio del juego](labs/lab06-audio.md)
 
 ---
 
@@ -175,6 +188,7 @@ El proyecto incluye una serie de laboratorios progresivos:
     - [Reglas de juego](docs/theory/game-rules.md)
     - [Estados de juego](docs/theory/game-states.md)
     - [Balance de juego](docs/theory/game-balance.md)
+    - [Audio de videojuegos 2D](docs/theory/game-audio.md)
 * Diseño → `docs/design/`
     - [Visión del proyecto](docs/design/vision.md)  
     - [Roadmap de desarrollo](docs/design/roadmap.md)
