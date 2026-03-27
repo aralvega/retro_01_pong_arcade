@@ -27,7 +27,7 @@ No se trata solo de un clon, sino de una implementación que busca:
 
 <p align="center">
   <img src="assets/screenshots/02_gameplay.png" width="45%" />
-  <img src="assets/screenshots/03_colision.png" width="45%" /><br/>
+  <img src="assets/screenshots/03_collision.png" width="45%" /><br/>
   <em>Gameplay y colisiones</em>
 </p>
 
