@@ -19,6 +19,9 @@ class InicioState implements GameState{
     textSize(20);
     text("Press SPACE to Start",width/2, height/2+10);
     
+    textSize(16);
+    text("Use ↑ ↓ to move", width/2, height/2 + 80);
+    
     textSize(14);
     text("Portfolio project - retro port series", width / 2, height / 2 + 50);
   }
