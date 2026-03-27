@@ -153,33 +153,7 @@ JugandoState --> Pelota
 JugandoState --> PaletaJugador
 JugandoState --> PaletaCPU
 JugandoState --> Hud
-
-
----
-
-# 🧠 Qué tiene de “nivel B académico”
-
-Este diagrama ya incluye:
-
-## ✔ Tipos de relaciones
-- herencia (`<|--`)
-- implementación (`<|..`)
-- composición explícita (`Game → GameState`)
-- dependencias funcionales
-
-## ✔ Responsabilidades claras
-- estados → control del flujo  
-- entidades → lógica del juego  
-- colisiones → desacopladas  
-- audio → centralizado  
-
-## ✔ Separación por capas (implícita)
-- núcleo  
-- estados  
-- entidades  
-- sistemas  
-- UI/audio  
-
+```
 ---
 
 ⬅️ [Volver al README](../../README.md)  
