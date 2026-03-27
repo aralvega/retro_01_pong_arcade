@@ -59,7 +59,8 @@ No se trata solo de un clon, sino de una implementación que busca:
 - 🧠 [Teoría — IA simple](docs/theory/simple-ai.md)
 - 🧠 [Teoría — Estados de juego](docs/theory/game-states.md)
 - 🧠 [Teoría — Balance de juego](docs/theory/game-balance.md)
-- 🧠 [Teoría — Audio en videojuegos 2D](docs/theory/game-audio.md)  
+- 🧠 [Teoría — Audio en videojuegos 2D](docs/theory/game-audio.md)
+- 🧱 [Diseño — Diagrama de clases](docs/diagrams/class-diagram.md)  
 - 🎯 [Visión del proyecto](docs/design/vision.md)  
 - 🗺️ [Roadmap](docs/design/roadmap.md)
 
@@ -182,6 +183,7 @@ retro-01-pong-arcade/
 ├── docs/
 │   ├── design/
 │   └── theory/
+│   └── diagrams/
 │
 ├── labs/
 │
@@ -219,6 +221,7 @@ El proyecto incluye una serie de laboratorios progresivos:
     - [Visión del proyecto](docs/design/vision.md)  
     - [Roadmap de desarrollo](docs/design/roadmap.md)
 * Diagramas → `docs/diagrams/`
+    - [Diagrama de clases](docs/diagrams/class-diagram.md)
 * Bitácora → `docs/devlog/`
 
 ---
@@ -237,10 +240,17 @@ Consultar: [Roadmap de desarrollo](docs/design/roadmap.md)
 
 ---
 
+## 🧱 Diagrama de clases
+
+![Class Diagram](docs/diagrams/class-diagram.png)
+
+---
+
 ## 📌 Estado del proyecto
 
-🟢 Funcional — versión jugable completa con oponente CPU y flujo de estados.  
-🟡 En desarrollo — mejoras de balance, optimización y presentación.
+🟢 Finalizado — versión jugable completa con IA, balance, audio y documentación.
+
+🔵 Extensible — base preparada para nuevos ports y mejoras futuras.
 
 ---
 
