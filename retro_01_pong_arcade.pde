@@ -7,7 +7,7 @@ void settings(){
 void setup(){
   frameRate(Config.TARGET_FPS);
   Time.reset(millis());
-  game = new Game();
+  game = new Game(this);
 }
 
 void draw(){

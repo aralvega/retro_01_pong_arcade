@@ -12,10 +12,10 @@ class JugandoState implements GameState{
                                      20, 100, 320);
     
     this.cpu = new PaletaCPU(new PVector(Config.SCREEN_WIDTH - 60, Config.SCREEN_HEIGHT / 2 - 50),
-                              20,100,150);
+                              20,100,200);
     
     this.pelota = new Pelota(new PVector(Config.SCREEN_WIDTH/2,Config.SCREEN_HEIGHT/2),
-                             12,new PVector(-220,0));
+                             12,new PVector(-250,0));
     
     this.hud = new Hud();
     
@@ -24,17 +24,31 @@ class JugandoState implements GameState{
   public void update(){
     this.jugador.update();
     this.cpu.update(this.pelota);
-    this.pelota.update();
-    this.pelota.checkCollision(this.jugador);
-    this.pelota.checkCollision(this.cpu);
     
+    //rebote en pared
+    boolean hitWall = this.pelota.update();
+    if (hitWall) {
+      this.game.getAudio().playWall();
+    }
+    
+    //colisiones con paletas
+    boolean hitPlayer = this.pelota.checkCollision(this.jugador);
+    boolean hitCPU = this.pelota.checkCollision(this.cpu);
+    
+    if (hitPlayer || hitCPU) {
+      this.game.getAudio().playPaddle();
+    }
+    
+    // puntos
     if(this.pelota.isOutLeft()){
       this.cpu.addPoint();
+      this.game.getAudio().playScore();
       this.pelota.resetToCenter(true);
     }
     
     if(this.pelota.isOutRight()){
       this.jugador.addPoint();
+      this.game.getAudio().playScore();
       this.pelota.resetToCenter(false);
     }
     

@@ -1,8 +1,11 @@
+import processing.core.PApplet;
 class Game{
   private GameState currentState;
+  private AudioManager audio;
   
-  public Game(){
-    currentState = new InicioState(this);
+  public Game(PApplet app){
+    this.audio = new AudioManager(app);
+    this.currentState = new InicioState(this);
   }
   
   public void setState(GameState newState){
@@ -23,6 +26,10 @@ class Game{
   
   public void keyReleased(char keyValue, int keyCodeValue){
     currentState.keyReleased(keyValue,keyCodeValue);
+  }
+  
+  public AudioManager getAudio(){
+    return this.audio;
   }
   
 }

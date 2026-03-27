@@ -13,36 +13,40 @@ class Pelota{
     this.hitFlash = 0;
   }
   
-  public void update(){
+  public boolean update(){
     this.position.x += this.velocity.x * Time.deltaTime;
     this.position.y += this.velocity.y * Time.deltaTime;
-    checkTopBottomBounds();
+    return checkTopBottomBounds();
   }
   
   public void render(){
-    fill(255);
-    circle(this.position.x,this.position.y, this.radius*2);
     if (this.hitFlash > 0) {
       fill(255, 200, 200);
       this.hitFlash--;
     } else {
       fill(255);
     }
+    circle(this.position.x,this.position.y, this.radius*2);
   }
   
-  private void checkTopBottomBounds(){
+  private boolean checkTopBottomBounds(){
+    boolean valueCheck = false;
     if(this.position.y - this.radius <= 0){
       this.position.y = this.radius;
       this.velocity.y *= -1;
+      valueCheck = true;
     }
     
     if(this.position.y + this.radius >= Config.SCREEN_HEIGHT){
       this.position.y = Config.SCREEN_HEIGHT - this.radius;
       this.velocity.y *= -1;
+      valueCheck = true;
     }
+    return valueCheck;
   }
   
-  public void checkCollision(Paleta paleta) {
+  public boolean checkCollision(Paleta paleta) {
+    boolean valueCheck = false;
     BoxCollider box = paleta.getCollider();
 
     if (Collision.circleVsBox(this.position, this.radius, box)) {
@@ -69,13 +73,15 @@ class Pelota{
 
       // Conserva la rapidez actual.
       float speed = this.velocity.mag();
-      speed*=1.05f; //aumento de la velocidad 5% en cada rebote
-      speed = constrain(speed,150,500); //pero evitamo que el juego se injugable
+      speed*=1.03f; //aumento de la velocidad 5% en cada rebote
+      speed = constrain(speed,150,420); //pero evitamo que el juego se injugable
 
       // Reconstruye el vector velocidad según el nuevo ángulo.
       this.velocity.x = cos(bounceAngle) * speed * directionX;
       this.velocity.y = sin(bounceAngle) * speed;
+      valueCheck = true;
     }
+    return valueCheck;
   }
   
   public boolean isOutLeft() {
@@ -90,15 +96,15 @@ class Pelota{
     this.position.set(Config.SCREEN_WIDTH / 2.0f, Config.SCREEN_HEIGHT / 2.0f);
 
     float directionX = moveRight ? 1 : -1;
-    this.velocity.set(this.baseSpeed * directionX, random(-150, 150));
+    this.velocity.set(this.baseSpeed * directionX, random(-120, 120));
   }
   
   public PVector getPosition(){
-    return this.position;
+    return this.position.copy();
   }
   
   public PVector getVelocity(){
-    return this.velocity;
+    return this.velocity.copy();
   }
   
 }

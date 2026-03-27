@@ -7,7 +7,7 @@ class PaletaCPU extends Paleta {
     super(position, widthP, heightP, speed);
     this.trackingError = 0;
     this.errorTimer = 0;
-    this.errorInterval = 0.35f; // cada cuánto cambia el error
+    this.errorInterval = 0.45f; // cada cuánto cambia el error
   }
 
   /**
@@ -29,38 +29,41 @@ class PaletaCPU extends Paleta {
   public void update(Pelota pelota) {
     // Posición actual de la pelota
     PVector ballPosition = pelota.getPosition();
+    
+    PVector ballVelocity = pelota.getVelocity();
     // Centro vertical de la paleta
     float paddleCenterY = this.position.y + this.heightP / 2.0f;
     
-    PVector ballVelocity = pelota.getVelocity();
-    
+    float targetY=0f;    
     // Zona de tolerancia para evitar oscilaciones (dead zone)
-    float tolerance = 5;
-    if (ballVelocity.x < 0) {
-      tolerance = 25;
-    }
+    float tolerance = 8;
     
-    
-
     // Mantener el mismo error durante un pequeño intervalo
     this.errorTimer += Time.deltaTime;
     
     if (this.errorTimer >= this.errorInterval) {
-      this.trackingError = random(-10, 10);
+      this.trackingError = random(-6, 6);
       this.errorTimer = 0;
     }
     
-    float targetY = ballPosition.y + this.trackingError;
+    if (ballVelocity.x > 0) {
+      // La pelota viene hacia la CPU: seguirla con precisión moderada
+      targetY = ballPosition.y + this.trackingError;
+      tolerance = 8;
+    } else {
+      // La pelota se aleja: volver suavemente al centro
+      targetY = Config.SCREEN_HEIGHT / 2.0f;
+      tolerance = 20;
+    }
     
     // Si la pelota está por encima de esa posicion imperfecta → subir
     if (targetY < paddleCenterY - tolerance) {
       this.position.y -= this.speed * Time.deltaTime;
-    }
-    // Si está por debajo de esa posición imperfecta → bajar
-    else if (targetY > paddleCenterY + tolerance) {
+    }// Si está por debajo de esa posición imperfecta → bajar 
+     else if (targetY > paddleCenterY + tolerance) {
       this.position.y += this.speed * Time.deltaTime;
     }
-
+   
     // Mantener dentro de los límites de la pantalla
     keepInsideScreen();
   }
