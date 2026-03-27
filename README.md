@@ -60,7 +60,8 @@ No se trata solo de un clon, sino de una implementación que busca:
 - 🧠 [Teoría — Estados de juego](docs/theory/game-states.md)
 - 🧠 [Teoría — Balance de juego](docs/theory/game-balance.md)
 - 🧠 [Teoría — Audio en videojuegos 2D](docs/theory/game-audio.md)
-- 🧱 [Diseño — Diagrama de clases](docs/diagrams/class-diagram.md)  
+- 🧱 [Diseño — Diagrama de clases](docs/diagrams/class-diagram.md)
+- 🧱 [Diseño — Diagrama de estados](docs/diagrams/state-diagram.md)  
 - 🎯 [Visión del proyecto](docs/design/vision.md)  
 - 🗺️ [Roadmap](docs/design/roadmap.md)
 
@@ -222,6 +223,7 @@ El proyecto incluye una serie de laboratorios progresivos:
     - [Roadmap de desarrollo](docs/design/roadmap.md)
 * Diagramas → `docs/diagrams/`
     - [Diagrama de clases](docs/diagrams/class-diagram.md)
+    - [Diagrama de estados](docs/diagrams/state-diagram.md)
 * Bitácora → `docs/devlog/`
 
 ---
@@ -243,6 +245,12 @@ Consultar: [Roadmap de desarrollo](docs/design/roadmap.md)
 ## 🧱 Diagrama de clases
 
 ![Class Diagram](docs/diagrams/class-diagram.png)
+
+---
+
+## 🧱 Diagrama de estados
+
+![State Diagram](docs/diagrams/state-diagram.png)
 
 ---
 
