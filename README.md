@@ -64,6 +64,8 @@ No se trata solo de un clon, sino de una implementación que busca:
 - 🧱 [Diseño — Diagrama de estados](docs/diagrams/state-diagram.md)  
 - 🎯 [Visión del proyecto](docs/design/vision.md)  
 - 🗺️ [Roadmap](docs/design/roadmap.md)
+- 📖 [Historias de usuario](docs/devlog/user-stories.md)
+- 📖 [Bitácora de desarrollo](docs/devlog/devlog.md)
 
 ---
 
@@ -184,6 +186,7 @@ retro-01-pong-arcade/
 ├── docs/
 │   ├── design/
 │   └── theory/
+│   └── devlog/
 │   └── diagrams/
 │
 ├── labs/
@@ -225,6 +228,8 @@ El proyecto incluye una serie de laboratorios progresivos:
     - [Diagrama de clases](docs/diagrams/class-diagram.md)
     - [Diagrama de estados](docs/diagrams/state-diagram.md)
 * Bitácora → `docs/devlog/`
+    - [Historias de usuario](docs/devlog/user-stories.md)
+    - [Bitácora de desarrollo](docs/devlog/devlog.md)
 
 ---
 
@@ -242,13 +247,15 @@ Consultar: [Roadmap de desarrollo](docs/design/roadmap.md)
 
 ---
 
-## 🧱 Diagrama de clases
+## 📊 Diagramas
+
+### 🧱 Diagrama de clases
 
 ![Class Diagram](docs/diagrams/class-diagram.png)
 
 ---
 
-## 🧱 Diagrama de estados
+### 🧱 Diagrama de estados
 
 ![State Diagram](docs/diagrams/state-diagram.png)
 
@@ -256,9 +263,21 @@ Consultar: [Roadmap de desarrollo](docs/design/roadmap.md)
 
 ## 📌 Estado del proyecto
 
-🟢 Finalizado — versión jugable completa con IA, balance, audio y documentación.
+🟢 Finalizado — videojuego completamente funcional con:
 
-🔵 Extensible — base preparada para nuevos ports y mejoras futuras.
+- arquitectura modular basada en estados  
+- sistema de colisiones desacoplado  
+- inteligencia artificial básica  
+- balance de dificultad  
+- feedback visual y sonoro  
+- documentación técnica y teórica  
+
+🔵 Extensible — base preparada para:
+
+- nuevos ports retro  
+- mejoras de IA  
+- ampliación de mecánicas  
+- integración de nuevos sistemas
 
 ---
 
@@ -269,6 +288,25 @@ Este proyecto está diseñado como recurso para:
 * Fundamentos de Programación Orientada a Objetos
 * Programación de Videojuegos
 * Modelado de sistemas interactivos
+
+---
+
+## 🧠 Conclusión
+
+Este proyecto representa una implementación completa del clásico Pong desde una perspectiva arquitectónica, pedagógica y profesional.
+
+Integra:
+
+- diseño de sistemas interactivos  
+- programación orientada a objetos  
+- modelado de comportamiento  
+- documentación técnica y conceptual  
+
+Sirve tanto como:
+
+- recurso didáctico  
+- base para nuevos desarrollos  
+- pieza de portfolio profesional  
 
 ---
 
@@ -284,4 +322,4 @@ Universidad Nacional de Jujuy – Facultad de Ingeniería
 
 ## 📄 Licencia
 
-MIT License (pendiente de incorporación)
+MIT License
