@@ -1,6 +1,9 @@
 # 🎮 Retro Pong Arcade (Processing)
 
 **Reimplementación del clásico Pong con arquitectura modular, documentación progresiva y enfoque pedagógico-profesional.**
+<p align="center">
+  <img src="assets/gif/gameplay.gif" />
+</p>
 > Proyecto desarrollado como base para una serie de ports retro con enfoque arquitectónico y pedagógico.
 ---
 
