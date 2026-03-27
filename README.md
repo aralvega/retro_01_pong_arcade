@@ -18,6 +18,25 @@ No se trata solo de un clon, sino de una implementación que busca:
 
 ---
 
+## 📸 Capturas
+
+<p align="center">
+  <img src="assets/screenshots/01_inicio.png" width="45%" /><br/>
+  <em>Pantalla de inicio</em>
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/02_gameplay.png" width="45%" />
+  <img src="assets/screenshots/03_colision.png" width="45%" /><br/>
+  <em>Gameplay y colisiones</em>
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/04_gameover.png" width="45%" /><br/>
+  <em>Pantalla de fin de juego</em>
+</p>
+---
+
 ## 🔗 Navegación rápida
 
 - 📚 [Lab 01 — Core Loop](labs/lab01-core-loop.md)
