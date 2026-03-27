@@ -198,5 +198,5 @@ Este proceso evidencia la importancia de:
 
 ## 🔗 Navegación
 
-⬅️ Volver al README  
-🏠 Repositorio principal
+⬅️ [Volver al README](../../README.md)  
+🏠 [Repositorio principal](https://github.com/aralvega/retro-01-pong-arcade)
