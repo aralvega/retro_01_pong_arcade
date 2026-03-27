@@ -195,8 +195,5 @@ Este proceso evidencia la importancia de:
 - validar cada etapa del desarrollo  
 
 ---
-
-## 🔗 Navegación
-
 ⬅️ [Volver al README](../../README.md)  
 🏠 [Repositorio principal](https://github.com/aralvega/retro-01-pong-arcade)
