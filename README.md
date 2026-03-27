@@ -24,12 +24,14 @@ No se trata solo de un clon, sino de una implementación que busca:
 - 📚 [Lab 02 — Entidades y movimiento](labs/lab02-entities-and-movement.md)
 - 📚 [Lab 03 — Colisiones](labs/lab03-collisions.md)
 - 📚 [Lab 04 — Reglas de Pong](labs/lab04-core-pong-rules.md)
-- 📚 [Lab 05 — CPU y flujo de juego](labs/lab05-cpu-and-game-flow.md)  
+- 📚 [Lab 05 — CPU y flujo de juego](labs/lab05-cpu-and-game-flow.md)
+- 📚 [Lab 06 Parte01 — Polish y Balance de juego](labs/lab06-polish-and-balance.md)  
 - 🧠 [Teoría — Game Loop](docs/theory/game-loop.md)
 - 🧠 [Teoría — Sistema de colisiones](docs/theory/collision-system.md)
 - 🧠 [Teoría — Reglas de juego](docs/theory/game-rules.md)
 - 🧠 [Teoría — IA simple](docs/theory/simple-ai.md)
-- 🧠 [Teoría — Estados de juego](docs/theory/game-states.md)  
+- 🧠 [Teoría — Estados de juego](docs/theory/game-states.md)
+- 🧠 [Teoría — Balance de juego](docs/theory/game-balance.md)  
 - 🎯 [Visión del proyecto](docs/design/vision.md)  
 - 🗺️ [Roadmap](docs/design/roadmap.md)
 
@@ -160,7 +162,7 @@ El proyecto incluye una serie de laboratorios progresivos:
 - [Lab 03 — Colisiones](labs/lab03-collisions.md)
 - [Lab 04 — Reglas de Pong](labs/lab04-core-pong-rules.md)
 - [Lab 05 — CPU y flujo de juego](labs/lab05-cpu-and-game-flow.md)
-* Lab 06 — Pulido y optimización
+- [Lab 06 Parte01 — Polish y Balance de juego](labs/lab06-polish-and-balance.md)
 
 ---
 
@@ -172,6 +174,7 @@ El proyecto incluye una serie de laboratorios progresivos:
     - [IA simple](docs/theory/simple-ai.md)
     - [Reglas de juego](docs/theory/game-rules.md)
     - [Estados de juego](docs/theory/game-states.md)
+    - [Balance de juego](docs/theory/game-balance.md)
 * Diseño → `docs/design/`
     - [Visión del proyecto](docs/design/vision.md)  
     - [Roadmap de desarrollo](docs/design/roadmap.md)
